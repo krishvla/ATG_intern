@@ -1,0 +1,26 @@
+{% load static %}x
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results Page</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/result.css' %}"
+    />
+  </head>
+  <body>
+    <h2>Result is Here</h2>
+    <div class="result">
+      {% for i in words %}
+      <p>{{ i }}</p>
+      {% endfor %}
+      <p id="from">{{ p }}</p>
+    </div>
+    <button class="button button1">
+      <a href="/frequency">Go Back To Find</a>
+    </button>
+  </body>
+</html>

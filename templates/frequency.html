@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequency Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <h2>Finding the Frequency</h2>
+    <div class="searchbox">
+      <form name="main_Form" action="/results/" method="post">
+        {% csrf_token %}
+        <input
+          type="text"
+          name="url"
+          class="searchbar"
+          placeholder="Paste the Url Here..."
+          required
+        />
+        <button type="submit" class="button button1">Find Out</button>
+      </form>
+    </div>
+  </body>
+</html>
